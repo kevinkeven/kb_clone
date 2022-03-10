@@ -18,7 +18,7 @@
     <input type="submit" value="Go" class="hidden" />
 </form>
 
-<form action="." method="post" class="registration registration--register">
+<form action="." method="post" class="registration registration--register shadow">
   <div class="registration--logo">
     <a href="/">
       {% block logo %}{{ block.super }}{% endblock %}
@@ -46,7 +46,7 @@
           {% endif %}
       {% endfor %}
       <input type="submit" value="{% trans 'Create Account' %}" class="btn btn-success" />
-      <div class="btn btn-success">
+      <div class="registration__footer">
         {% trans "or" %} <a href="{% url 'auth_login' %}">{% trans "login" %}</a>
       </div>
   </div>
