@@ -12,7 +12,7 @@ class InAppMessageAdmin(MarkdownxModelAdmin):
         'here will not cause it to reappear.'
     )
     drag_drop_warning = (
-        '⚠ Warning: Please drag and drop photos directly into the Snippet or '
+        '⚠ Warning: Please drag and drop images into the Snippet. or '
         'Body boxes. Copying the URL from the in app message files will '
         'likely cause errors.'
     )
@@ -20,9 +20,7 @@ class InAppMessageAdmin(MarkdownxModelAdmin):
 
     def get_form(self, *args, **kwargs):
         """
-        Allows us to add warning messages to the top of the form without
-        manually maintaining a list of model fields in this class. An
-        approximation of a model-level `help_text`
+        Allows us to add warning messages to the form's top without having to manually keep a list of model fields in this class. A model-level approximation `help_text`
         """
 
         # Get the auto-generated form, which will contain the appropriate list
