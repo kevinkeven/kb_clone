@@ -1,0 +1,50 @@
+{% extends "registration.html" %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+  <form method="post" action="." class="registration registration--login">
+    <div class="registration--logo"><a href="/">
+    {% block logo %}{{ block.super }}{% endblock %}
+    </a></div>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <a href="{% url 'auth_password_reset' %}" class="registration__forgot">
+      {% trans "Forgot?" %}
+    </a>
+    <input type="submit" value="SignIn" class="bt btn-success" />
+    <input type="hidden" name="next" value="{{ next }}" />
+
+    {% if config.REGISTRATION_OPEN %}
+      <div class="registration__footer">
+        {% trans "or" %} <a href="{% url 'registration_register' %}">{% trans "create an account" %}</a>
+      </div>
+    {% endif %}
+  </form>
+  <div class="container d-flex justify-content-center mt-3">
+    <div class="row">
+      <div class="col">
+        <img src="https://ibb.co/tBQ7QRQ" class="rounded" alt="Radio Apache" width="40">
+      </div>
+      <div class="col">
+        <img src="https://ibb.co/2S8KYpz" class="rounded" alt="dw akademia"  width="150">
+      </div>
+      <div class="col">
+        <img src="https://ibb.co/KwK0xQz" class="rounded" alt="media_future_ea"  width="70">
+      </div>
+    </div>
+  </div>
+  <div class="container d-flex justify-content-center">
+    <div class="row">
+      <div class="col">
+        <img src="https://ibb.co/yPphB0X" class="rounded" alt="germany_corp" width="130">
+      </div>
+      <div class="col">
+        <img src="https://ibb.co/wyCFTZY" class="rounded" alt="kfw"  width="130">
+      </div>
+      <div class="col">
+        <img src="https://ibb.co/FWXQ607" class="rounded" alt="Aga khan "  width="130">
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
