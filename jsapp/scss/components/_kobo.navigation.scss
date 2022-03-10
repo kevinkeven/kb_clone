@@ -11,7 +11,8 @@ $layout-header-bg-color: #2496ed!important;
 }
 
 .mdl-layout__header {
-  background-color: $layout-header-bg-color;
+  background: rgb(51,56,71);
+  background: linear-gradient(90deg, rgba(51,56,71,1) 0%, rgba(91,42,160,1) 52%, rgba(33,150,243,1) 100%);
   min-height: $layout-desktop-header-height;
   margin-left: 0px;
   width: 100%;
