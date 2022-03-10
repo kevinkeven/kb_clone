@@ -15,7 +15,7 @@
     <input type="hidden" name="next" value="{{ next }}" />
 
     {% if config.REGISTRATION_OPEN %}
-      <div class="registration__footer">
+      <div class="btn btn-success">
         {% trans "or" %} <a href="{% url 'registration_register' %}">{% trans "create an account" %}</a>
       </div>
     {% endif %}

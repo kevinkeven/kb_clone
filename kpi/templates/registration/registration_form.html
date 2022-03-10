@@ -45,8 +45,8 @@
             <div class="field" id="registration-password-app"></div>
           {% endif %}
       {% endfor %}
-      <input type="submit" value="{% trans 'Create Account' %}" class="registration__action" />
-      <div class="registration__orlogin">
+      <input type="submit" value="{% trans 'Create Account' %}" class="btn btn-success" />
+      <div class="btn btn-success">
         {% trans "or" %} <a href="{% url 'auth_login' %}">{% trans "login" %}</a>
       </div>
   </div>
